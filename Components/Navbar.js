@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { Icon } from "react-native-elements";
-const Navbar = () => {
+import { useRoute } from "@react-navigation/native";
+const Navbar = ({ navigation }) => {
+  const [screen, SetScreen] = useState("Home");
+  const route = useRoute().name;
+
+  useEffect(() => {
+    SetScreen(route);
+  }, [route]);
   return (
     <View
       style={{
@@ -21,13 +28,20 @@ const Navbar = () => {
         alignItems: "center",
       }}
     >
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        onPress={() => {
+          if (screen !== "Home") {
+            navigation.push("Home");
+          }
+        }}
+      >
         <View
           style={{
             width: 55,
             height: 55,
             borderRadius: 55 / 2,
-            backgroundColor: "rgba(0, 129, 247, 0.13)",
+            backgroundColor:
+              screen === "Home" ? "rgba(0, 129, 247, 0.13)" : "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -38,20 +52,27 @@ const Navbar = () => {
             style={{
               margin: 0,
             }}
-            name="home"
             type="ionicon"
-            color="#0081F7"
+            name={screen === "Home" ? "home" : "home-outline"}
+            color={screen === "Home" ? "#0081F7" : "#B7C3D0"}
           />
         </View>
       </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        onPress={() => {
+          if (screen !== "Model1") {
+            navigation.push("Model1");
+          }
+        }}
+      >
         <View
           style={{
             width: 55,
             height: 55,
             borderRadius: 55 / 2,
-
+            backgroundColor:
+              screen === "Model1" ? "rgba(0, 129, 247, 0.13)" : "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -62,9 +83,9 @@ const Navbar = () => {
             style={{
               margin: 0,
             }}
-            name="fitness-outline"
             type="ionicon"
-            color="#B7C3D0"
+            name={screen === "Model1" ? "fitness" : "fitness-outline"}
+            color={screen === "Model1" ? "#0081F7" : "#B7C3D0"}
           />
         </View>
       </TouchableWithoutFeedback>

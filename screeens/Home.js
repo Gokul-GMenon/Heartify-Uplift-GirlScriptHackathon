@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { useFonts } from "@use-expo/font";
 import Navbar from "../Components/Navbar";
-const Home = () => {
+const Home = ({ navigation }) => {
   const [isLoaded] = useFonts({
     kumbhLight: require("../assets/fonts/KumbhSans-Light.ttf"),
     kumbhmedium: require("../assets/fonts/KumbhSans-Medium.ttf"),
@@ -44,7 +44,7 @@ const Home = () => {
   } else {
     return (
       <>
-        <Navbar />
+        <Navbar navigation={navigation} />
         <ScrollView
           style={{
             flex: 1,
