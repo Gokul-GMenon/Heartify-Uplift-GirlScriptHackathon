@@ -222,7 +222,7 @@ const Model1 = ({ navigation }) => {
             <Text style={styles.text}>Resting Blood Pressure</Text>
             <TextInput
               style={styles.input}
-              placeholder="Your age"
+              placeholder="Resting Blood Pressure"
               keyboardType="numeric"
               onChangeText={(value) => setInput({ ...input, rbp: value })}
             />

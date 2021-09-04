@@ -24,15 +24,17 @@ const success = ({ navigation }) => {
         style={{
           fontSize: RFValue(45),
           fontFamily: "kumbhBold",
-          fontSize: RFValue(20),
+          fontSize: RFValue(15),
           letterSpacing: -0.03,
           color: "rgba(0, 129, 247, 0.8)",
-          lineHeight: 30,
+          lineHeight: 20,
           textAlign: "center",
           width: "70%",
+          marginTop: 6,
         }}
       >
-        It's Recommended to seek help of a Doctor
+        It looks like you have some cardiovascular issues. We recommend you to
+        take care of your health and visit a cardiologist.
       </Text>
     </View>
   );
