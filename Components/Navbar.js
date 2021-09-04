@@ -42,7 +42,7 @@ const Navbar = ({ navigation }) => {
             height: 55,
             borderRadius: 55 / 2,
             backgroundColor:
-              screen === "Home" || screen === "food"
+              screen === "Home" || screen === "foodData" || screen === "food"
                 ? "rgba(0, 129, 247, 0.13)"
                 : "#fff",
             display: "flex",
@@ -57,10 +57,14 @@ const Navbar = ({ navigation }) => {
             }}
             type="ionicon"
             name={
-              screen === "Home" || screen === "food" ? "home" : "home-outline"
+              screen === "Home" || screen === "foodData" || screen === "food"
+                ? "home"
+                : "home-outline"
             }
             color={
-              screen === "Home" || screen === "food" ? "#0081F7" : "#B7C3D0"
+              screen === "Home" || screen === "foodData" || screen === "food"
+                ? "#0081F7"
+                : "#B7C3D0"
             }
           />
         </View>
@@ -121,13 +125,20 @@ const Navbar = ({ navigation }) => {
         </View>
       </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        onPress={() => {
+          if (screen !== "steps") {
+            navigation.push("steps");
+          }
+        }}
+      >
         <View
           style={{
             width: 55,
             height: 55,
             borderRadius: 55 / 2,
-
+            backgroundColor:
+              screen === "steps" ? "rgba(0, 129, 247, 0.13)" : "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -138,9 +149,9 @@ const Navbar = ({ navigation }) => {
             style={{
               margin: 0,
             }}
-            name="compass-outline"
+            name={screen === "steps" ? "walk" : "walk-outline"}
             type="ionicon"
-            color="#B7C3D0"
+            color={screen === "steps" ? "#0081F7" : "#B7C3D0"}
           />
         </View>
       </TouchableWithoutFeedback>

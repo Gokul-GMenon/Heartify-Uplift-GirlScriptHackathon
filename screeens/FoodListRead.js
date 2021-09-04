@@ -20,12 +20,15 @@ const FoodListRead = ({ navigation, route }) => {
       style={{
         flex: 1,
         backgroundColor: "#F3F4FB",
-        paddingLeft: 15,
-        paddingRight: 15,
       }}
     >
       <Navbar navigation={navigation} />
-      <ScrollView>
+      <ScrollView
+        style={{
+          paddingLeft: 15,
+          paddingRight: 15,
+        }}
+      >
         <View
           style={{
             alignItems: "center",
@@ -130,43 +133,62 @@ const FoodListRead = ({ navigation, route }) => {
             </Text>
           </View>
         </TouchableOpacity>
-        <View
-          style={{
-            backgroundColor: "#fff",
-            width: "100%",
-
-            borderRadius: 5,
-            elevation: 0.2,
-            marginBottom: 15,
-            marginTop: 40,
-          }}
-        >
+        {data ? (
           <View
             style={{
-              flexDirection: "row",
+              backgroundColor: "#fff",
+              width: "100%",
+
+              borderRadius: 5,
+              elevation: 0.2,
+              marginBottom: 15,
+              marginTop: 40,
+              padding: 5,
             }}
           >
-            <Text
+            <View
               style={{
-                fontSize: RFValue(50),
-                marginTop: -35,
+                flexDirection: "row",
+                alignItems: "flex-end",
               }}
             >
-              🍟
-            </Text>
+              <Text
+                style={{
+                  fontSize: RFValue(50),
+                  marginTop: -35,
+                }}
+              >
+                {data.image}
+              </Text>
+              <Text
+                style={{
+                  fontSize: RFValue(18),
+                  fontFamily: "kumbhBold",
+                  color: "#5B6473",
+
+                  marginLeft: 5,
+                }}
+              >
+                {data.name}
+              </Text>
+            </View>
             <Text
               style={{
+                paddingLeft: 10,
+                paddingRight: 10,
+                paddingBottom: 10,
                 fontSize: RFValue(15),
-                fontFamily: "kumbhBold",
-                color: "#5B6473",
-                lineHeight: 16,
-                marginLeft: 5,
+                fontFamily: "kumbhregular",
+                color: "#B7C3D0",
+                lineHeight: 22,
+                marginBottom: 7,
+                marginTop: 5,
               }}
             >
-              Don jOSE
+              {data.desc}
             </Text>
           </View>
-        </View>
+        ) : null}
       </ScrollView>
     </View>
   );

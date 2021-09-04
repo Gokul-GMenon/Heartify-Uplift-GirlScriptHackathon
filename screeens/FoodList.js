@@ -39,12 +39,10 @@ const FoodList = ({ navigation }) => {
       style={{
         flex: 1,
         backgroundColor: "#F3F4FB",
-        paddingLeft: 15,
-        paddingRight: 15,
       }}
     >
       <Navbar navigation={navigation} />
-      <ScrollView>
+      <ScrollView style={{ paddingLeft: 15, paddingRight: 15 }}>
         <View
           style={{
             alignItems: "center",
