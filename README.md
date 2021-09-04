@@ -1,7 +1,7 @@
 # Heartify
 
-<img src="../heartify/images/heartify1.png">
-<img src="../heartify/images/heartify2.png">
+<img src="https://raw.githubusercontent.com/dontech09/Heartify-Uplift-GirlScriptHackathon/main/images/heartify1.png" height={50}>
+<img src="https://raw.githubusercontent.com/dontech09/Heartify-Uplift-GirlScriptHackathon/main/images/heartify2.png" height={50}>
 
 figma : https://www.figma.com/file/EL61qJSmC1nABOF6IhUz0f/GirlscriptHackathon-Heartify?node-id=73%3A27
 
