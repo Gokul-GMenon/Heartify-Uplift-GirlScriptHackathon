@@ -261,6 +261,7 @@ const Home = ({ navigation }) => {
           </View>
 
           <TouchableOpacity
+            onPress={() => navigation.push("food")}
             style={{
               borderRadius: 6,
               backgroundColor: "#ffff",

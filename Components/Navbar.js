@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { useRoute } from "@react-navigation/native";
+
 const Navbar = ({ navigation }) => {
   const [screen, SetScreen] = useState("Home");
   const route = useRoute().name;
@@ -41,7 +42,9 @@ const Navbar = ({ navigation }) => {
             height: 55,
             borderRadius: 55 / 2,
             backgroundColor:
-              screen === "Home" ? "rgba(0, 129, 247, 0.13)" : "#fff",
+              screen === "Home" || screen === "food"
+                ? "rgba(0, 129, 247, 0.13)"
+                : "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -53,8 +56,12 @@ const Navbar = ({ navigation }) => {
               margin: 0,
             }}
             type="ionicon"
-            name={screen === "Home" ? "home" : "home-outline"}
-            color={screen === "Home" ? "#0081F7" : "#B7C3D0"}
+            name={
+              screen === "Home" || screen === "food" ? "home" : "home-outline"
+            }
+            color={
+              screen === "Home" || screen === "food" ? "#0081F7" : "#B7C3D0"
+            }
           />
         </View>
       </TouchableWithoutFeedback>
