@@ -1,0 +1,43 @@
+	model-(no st-depression, st_slope_flat)-attributes(noECG)-78-percent
+
+	Model accuracy 78%
+- age
+- resting bp
+- cholestrol
+- fasting blood sugar (high/low)
+- max heart rate
+- exercise induced anigna (yes/no)
+- sex (male/female)
+- chest pain type (atypical anigna/ non anignal pain/ typical anigna)
+
+
+
+	model-(no cholestrol, st-depression, resting-bp)-attributes(noECG)-83-percent
+
+	Model accuracy 83%
+
+- age
+- fasting blood sugar (high/low)
+- max heart rate
+- exercise induced anigna (yes/no)
+- sex (male/female)
+- chest pain type (atypical anigna/ non anignal pain/ typical anigna)
+- st slope (flat/ not flat)
+
+
+	model-all-attributes(noECG)-84-percent
+	
+	Model accuracy 84%
+
+- age
+- resting bp
+- cholestrol
+- fasting blood sugar (high/low)
+- max heart rate
+- exercise induced anigna (yes/no)
+- st depression
+- sex (male/female)
+- chest pain type (atypical anigna/ non anignal pain/ typical anigna)
+- st slope (flat/non flat)
+
+
