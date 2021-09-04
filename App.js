@@ -8,6 +8,7 @@ import Model1 from "./screeens/Model1";
 import FoodList from "./screeens/FoodList";
 import FoodListRead from "./screeens/FoodListRead";
 import Steps from "./screeens/Steps";
+import Model2 from "./screeens/Model2";
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -44,6 +45,13 @@ export default function App() {
         <Stack.Screen
           name="steps"
           component={Steps}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="model2"
+          component={Model2}
           options={{
             headerShown: false,
           }}

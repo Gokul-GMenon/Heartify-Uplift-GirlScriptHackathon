@@ -101,13 +101,20 @@ const Navbar = ({ navigation }) => {
         </View>
       </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        onPress={() => {
+          if (screen !== "model2") {
+            navigation.push("model2");
+          }
+        }}
+      >
         <View
           style={{
             width: 55,
             height: 55,
             borderRadius: 55 / 2,
-
+            backgroundColor:
+              screen === "model2" ? "rgba(0, 129, 247, 0.13)" : "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -118,9 +125,9 @@ const Navbar = ({ navigation }) => {
             style={{
               margin: 0,
             }}
-            name="water-outline"
             type="ionicon"
-            color="#B7C3D0"
+            name={screen === "model2" ? "water" : "water-outline"}
+            color={screen === "model2" ? "#0081F7" : "#B7C3D0"}
           />
         </View>
       </TouchableWithoutFeedback>
