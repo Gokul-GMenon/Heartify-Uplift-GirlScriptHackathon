@@ -1,6 +1,7 @@
 from flask import Flask,request,jsonify
 import pickle
 import numpy as np
+import logging,sys
 
 
 
@@ -93,3 +94,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
