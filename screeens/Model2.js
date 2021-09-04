@@ -122,7 +122,7 @@ const Model2 = ({ navigation }) => {
             marginTop: 30,
           }}
         >
-          Section Heading
+          For Laboratory Use
         </Text>
         <View
           style={{

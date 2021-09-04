@@ -135,7 +135,7 @@ const Navbar = ({ navigation }) => {
       <TouchableWithoutFeedback
         onPress={() => {
           if (screen !== "steps") {
-            navigation.push("steps");
+            navigation.push("sucess");
           }
         }}
       >

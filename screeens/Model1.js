@@ -69,6 +69,7 @@ const Model1 = ({ navigation }) => {
         "st depression": input.std,
       };
       console.log(data);
+      navigation.push("sucess");
     }
   }
   return (
@@ -129,7 +130,7 @@ const Model1 = ({ navigation }) => {
             marginTop: 30,
           }}
         >
-          Section Heading
+          For Personal Use
         </Text>
         <View
           style={{

@@ -36,9 +36,7 @@ const Home = ({ navigation }) => {
           style={{
             fontSize: 25,
           }}
-        >
-          Loading
-        </Text>
+        ></Text>
       </View>
     );
   } else {
